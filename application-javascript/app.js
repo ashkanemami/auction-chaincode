@@ -43,7 +43,7 @@ async function initGatewayForOrg1() {
 
 	// in a real application this would be done only when a new user was required to be added
 	// and would be part of an administrative flow
-	await registerAndEnrollUser(caOrg1Client, walletOrg1, mspOrg1, org1UserId, 'org1.department1');
+	// await registerAndEnrollUser(caOrg1Client, walletOrg1, mspOrg1, org1UserId, 'org1.department1');
 
 	// Create a new gateway instance for interacting with the fabric network.
 	// In a real application this would be done as the backend server session is setup for
@@ -52,7 +52,7 @@ async function initGatewayForOrg1() {
 	try {
 		await gatewayOrg1.connect(ccpOrg1, {
 			wallet: walletOrg1,
-			identity: org1UserId,
+			identity: 'admin',
 			discovery: { enabled: true, asLocalhost: true } // using asLocalhost as this gateway is using a fabric network deployed locally
 		});
 
@@ -80,7 +80,7 @@ async function initGatewayForOrg2() {
 
 	// in a real application this would be done only when a new user was required to be added
 	// and would be part of an administrative flow
-	await registerAndEnrollUser(caOrg2Client, walletOrg2, mspOrg2, org2UserId, 'org2.department1');
+	// await registerAndEnrollUser(caOrg2Client, walletOrg2, mspOrg2, org2UserId, 'org2.department1');
 
 	// Create a new gateway instance for interacting with the fabric network.
 	// In a real application this would be done as the backend server session is setup for
@@ -89,7 +89,7 @@ async function initGatewayForOrg2() {
 	try {
 		await gatewayOrg2.connect(ccpOrg2, {
 			wallet: walletOrg2,
-			identity: org2UserId,
+			identity: 'admin',
 			discovery: { enabled: true, asLocalhost: true } // using asLocalhost as this gateway is using a fabric network deployed locally
 		});
 
@@ -117,7 +117,7 @@ async function initGatewayForOrg3() {
 
 	// in a real application this would be done only when a new user was required to be added
 	// and would be part of an administrative flow
-	await registerAndEnrollUser(caOrg3Client, walletOrg3, mspOrg3, org3UserId, 'org3.department1');
+	// await registerAndEnrollUser(caOrg3Client, walletOrg3, mspOrg3, org3UserId, 'org3.department1');
 
 	// Create a new gateway instance for interacting with the fabric network.
 	// In a real application this would be done as the backend server session is setup for

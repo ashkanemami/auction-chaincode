@@ -4,19 +4,6 @@
 
 'use strict';
 
-//ListingState=RequestState
-// ForSale=Pending
-// Sold=Finished
-// AddProduct=AddRequest
-// productId=requestId
-// product=request
-// listingId=auctionId
-// productListing = requestListing
-// productData = requestDetail
-// listingData=auctionDetail
-// memberId=sellerId
-// listing = auction
-
 const { Contract } = require('fabric-contract-api');
 
 // predefined request states
